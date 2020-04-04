@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		56D4868224392247003F0AFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868124392247003F0AFB /* AppDelegate.swift */; };
 		56D4868424392247003F0AFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868324392247003F0AFB /* SceneDelegate.swift */; };
-		56D4868624392247003F0AFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868524392247003F0AFB /* ViewController.swift */; };
+		56D4868624392247003F0AFB /* CarNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868524392247003F0AFB /* CarNumViewController.swift */; };
 		56D4868924392247003F0AFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D4868724392247003F0AFB /* Main.storyboard */; };
 		56D4868C24392247003F0AFB /* CarNum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868A24392247003F0AFB /* CarNum.xcdatamodeld */; };
 		56D4868E2439224C003F0AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D4868D2439224C003F0AFB /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		56D4867E24392247003F0AFB /* CarNum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarNum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D4868124392247003F0AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56D4868324392247003F0AFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		56D4868524392247003F0AFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56D4868524392247003F0AFB /* CarNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNumViewController.swift; sourceTree = "<group>"; };
 		56D4868824392247003F0AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56D4868B24392247003F0AFB /* CarNum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarNum.xcdatamodel; sourceTree = "<group>"; };
 		56D4868D2439224C003F0AFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			children = (
 				56D4868124392247003F0AFB /* AppDelegate.swift */,
 				56D4868324392247003F0AFB /* SceneDelegate.swift */,
-				56D4868524392247003F0AFB /* ViewController.swift */,
+				56D4868524392247003F0AFB /* CarNumViewController.swift */,
 				56D4868724392247003F0AFB /* Main.storyboard */,
 				56D4868D2439224C003F0AFB /* Assets.xcassets */,
 				56D4868F2439224C003F0AFB /* LaunchScreen.storyboard */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56D4868624392247003F0AFB /* ViewController.swift in Sources */,
+				56D4868624392247003F0AFB /* CarNumViewController.swift in Sources */,
 				56D4868C24392247003F0AFB /* CarNum.xcdatamodeld in Sources */,
 				56D4868224392247003F0AFB /* AppDelegate.swift in Sources */,
 				56D4868424392247003F0AFB /* SceneDelegate.swift in Sources */,
