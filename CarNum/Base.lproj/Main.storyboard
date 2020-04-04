@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pAy-PM-5g6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ux7-T7-7NQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Car Num View Controller-->
+        <!--CarNumBar-->
         <scene sceneID="nYm-Pk-QMl">
             <objects>
                 <tableViewController id="pAy-PM-5g6" customClass="CarNumViewController" customModule="CarNum" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,10 +28,33 @@
                             <outlet property="dataSource" destination="pAy-PM-5g6" id="vOz-0P-Ve5"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="CarNumBar" id="9fG-It-rhT"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eu9-Nw-5lU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-96" y="123"/>
+            <point key="canvasLocation" x="813.04347826086962" y="122.54464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C6A-88-ywH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ux7-T7-7NQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HI8-YR-AMW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pAy-PM-5g6" kind="relationship" relationship="rootViewController" id="Y9u-q1-XAl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UY1-WY-MUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97.101449275362327" y="122.54464285714285"/>
         </scene>
     </scenes>
 </document>
