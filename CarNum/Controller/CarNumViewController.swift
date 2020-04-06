@@ -43,6 +43,9 @@ class CarNumViewController: UITableViewController {
         
         
     }
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+    }
     
 }
 
