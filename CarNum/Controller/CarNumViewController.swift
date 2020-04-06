@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarNumViewController: UITableViewController {
+class CarNumViewController: UITableViewController{
     
     let itemArray = ["aa999a777", "oo888o99", "ва564а54", "aa432a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва564а54", "aa432a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54"]
     
@@ -44,6 +44,8 @@ class CarNumViewController: UITableViewController {
         
     }
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        self.performSegue(withIdentifier: "addNewItem", sender: self)
         
     }
     
