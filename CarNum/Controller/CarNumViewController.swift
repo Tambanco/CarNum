@@ -10,7 +10,7 @@ import UIKit
 
 class CarNumViewController: UITableViewController{
     
-    let itemArray = ["aa999a777", "oo888o99", "ва564а54", "aa432a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва564а54", "aa432a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54", "aa999a777", "oo888o99", "ва757а54"]
+    var itemArray = ["aa999a777", "oo888o99", "ва564а54"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +30,6 @@ class CarNumViewController: UITableViewController{
         
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("section: \(indexPath.section)")
-//        print("row: \(indexPath.row)")
-//        print("\(itemArray[indexPath.row])")
         
         if  tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark{
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
@@ -45,7 +42,11 @@ class CarNumViewController: UITableViewController{
     }
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
-        self.performSegue(withIdentifier: "addNewItem", sender: self)
+        self.tableView.reloadData()
+        
+        performSegue(withIdentifier: "addNewItem", sender: self)
+        
+        
         
     }
     

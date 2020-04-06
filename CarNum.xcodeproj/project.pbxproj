@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5696737F243B4B1F00639D7A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696737E243B4B1F00639D7A /* AddViewController.swift */; };
+		56967381243B781D00639D7A /* dataForItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56967380243B781D00639D7A /* dataForItem.swift */; };
 		56D4868224392247003F0AFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868124392247003F0AFB /* AppDelegate.swift */; };
 		56D4868424392247003F0AFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868324392247003F0AFB /* SceneDelegate.swift */; };
 		56D4868624392247003F0AFB /* CarNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868524392247003F0AFB /* CarNumViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		5696737E243B4B1F00639D7A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = SOURCE_ROOT; };
+		56967380243B781D00639D7A /* dataForItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataForItem.swift; sourceTree = "<group>"; };
 		56D4867E24392247003F0AFB /* CarNum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarNum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D4868124392247003F0AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56D4868324392247003F0AFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 		56967379243B442B00639D7A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				56967380243B781D00639D7A /* dataForItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				5696737F243B4B1F00639D7A /* AddViewController.swift in Sources */,
 				56D4868624392247003F0AFB /* CarNumViewController.swift in Sources */,
+				56967381243B781D00639D7A /* dataForItem.swift in Sources */,
 				56D4868C24392247003F0AFB /* CarNum.xcdatamodeld in Sources */,
 				56D4868224392247003F0AFB /* AppDelegate.swift in Sources */,
 				56D4868424392247003F0AFB /* SceneDelegate.swift in Sources */,

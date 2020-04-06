@@ -59,7 +59,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Добавить"/>
                                 <connections>
-                                    <action selector="addButton:" destination="6tK-Qh-DQe" eventType="touchUpInside" id="UNN-Xf-t6m"/>
+                                    <action selector="addNewItemButton:" destination="6tK-Qh-DQe" eventType="touchUpInside" id="UNN-Xf-t6m"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vig-OV-e3Z">
@@ -67,6 +67,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <locale key="locale" localeIdentifier="ru_RU"/>
+                                <connections>
+                                    <action selector="dateChanged:" destination="6tK-Qh-DQe" eventType="valueChanged" id="esZ-iT-BvF"/>
+                                </connections>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="аа999а77" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="idq-RL-LZV">
                                 <rect key="frame" x="20" y="413" width="374" height="34"/>

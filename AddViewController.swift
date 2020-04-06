@@ -17,10 +17,30 @@ class AddViewController: UIViewController {
         
     }
     
-    @IBAction func addButton(_ sender: UIButton) {
+    @IBAction func addNewItemButton(_ sender: UIButton) {
+        
+        let firstVC = CarNumViewController()
+        firstVC.itemArray.append(labelText.text!)
+        
+        firstVC.tableView.reloadData()
+        
         dismiss(animated: true, completion: nil)
         
+        
+    }
+    @IBAction func dateChanged(_ sender: UIDatePicker) {
+    }
+    
+
+}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                         action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
 
-
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
 }
