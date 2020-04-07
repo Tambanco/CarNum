@@ -45,7 +45,6 @@ class CarNumViewController: UITableViewController, RecieveData{
     }
     
     func dataRecieved(data: String) {
-        
         self.itemArray.append(data)
         self.tableView.reloadData()
     }

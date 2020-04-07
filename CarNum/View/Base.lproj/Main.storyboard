@@ -56,7 +56,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="xwN-j0-90U">
                                 <rect key="frame" x="47" y="245.33333333333334" width="320" height="351.66666666666663"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="аа999а77" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="idq-RL-LZV">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="аа999а77" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="idq-RL-LZV">
                                         <rect key="frame" x="78" y="0.0" width="164" height="45.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
@@ -66,7 +66,7 @@
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <locale key="locale" localeIdentifier="ru_RU"/>
                                         <connections>
-                                            <action selector="dateChanged:" destination="6tK-Qh-DQe" eventType="valueChanged" id="esZ-iT-BvF"/>
+                                            <action selector="pickerChanged:" destination="6tK-Qh-DQe" eventType="valueChanged" id="3pa-nz-40K"/>
                                         </connections>
                                     </datePicker>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="RUj-Kd-usl">

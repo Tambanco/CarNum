@@ -10,5 +10,5 @@ import Foundation
 
 struct dataForItem {
     let carNumber: String
-    let timeDate: String
+    let dateMark: String
 }

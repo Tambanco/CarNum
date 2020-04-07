@@ -17,20 +17,23 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     var delegate: RecieveData?
     
     var data = ""
-        
+    
     @IBOutlet weak var labelText: UITextField!
     @IBOutlet weak var dataMark: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        labelText.delegate = self
+        
     }
     
     @IBAction func addNewItemButton(_ sender: UIButton) {
         
+        let totalData = "\(self.labelText.text!) DateMark: \(dataMark)"
         
-        delegate?.dataRecieved(data: self.labelText.text!)
-        
+        labelText.endEditing(true)
+        delegate?.dataRecieved(data: totalData)
         dismiss(animated: true, completion: nil)
         
     }
@@ -38,7 +41,13 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         
         dismiss(animated: true, completion: nil)
     }
- 
     
+    @IBAction func pickerChanged(_ sender: UIDatePicker) {
+        
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        labelText.endEditing(true)
+        return true
+    }
 }
 
