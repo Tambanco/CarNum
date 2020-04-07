@@ -15,7 +15,6 @@ protocol RecieveData {
 class AddViewController: UIViewController, UITextFieldDelegate {
     
     var delegate: RecieveData?
-    
     var data = ""
     
     @IBOutlet weak var labelText: UITextField!
@@ -30,7 +29,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addNewItemButton(_ sender: UIButton) {
         
-        let totalData = "\(self.labelText.text!) DateMark: \(dataMark)"
+        let totalData = "\(self.labelText.text!) DateMark: \(dataMark!)"
         
         labelText.endEditing(true)
         delegate?.dataRecieved(data: totalData)

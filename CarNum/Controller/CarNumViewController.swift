@@ -12,9 +12,14 @@ class CarNumViewController: UITableViewController, RecieveData{
     
     var itemArray = ["aa999a777", "oo888o99", "ва564а54"]
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let items = defaults.array(forKey: "CarNumArray") as? [String]{
+            itemArray = items
+        }
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
@@ -46,6 +51,9 @@ class CarNumViewController: UITableViewController, RecieveData{
     
     func dataRecieved(data: String) {
         self.itemArray.append(data)
+        
+        defaults.set(self.itemArray, forKey: "CarNumArray")
+        
         self.tableView.reloadData()
     }
     
