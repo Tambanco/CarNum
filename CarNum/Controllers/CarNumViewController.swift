@@ -10,16 +10,25 @@ import UIKit
 
 class CarNumViewController: UITableViewController, RecieveData{
     
-    var itemArray = ["aa999a777", "oo888o99", "ва564а54"]
+    var itemArray = [Item]()
     
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let items = defaults.array(forKey: "CarNumArray") as? [String]{
-            itemArray = items
-        }
+        let newItem = Item()
+        newItem.carNumber = "New Item"
+        itemArray.append(newItem)
+        
+        let newItem2 = Item()
+        newItem2.carNumber = "Luke"
+        itemArray.append(newItem2)
+        
+        let newItem3 = Item()
+        newItem3.carNumber = "Obevan"
+        itemArray.append(newItem3)
+        
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
@@ -27,15 +36,22 @@ class CarNumViewController: UITableViewController, RecieveData{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CarNumCell", for: indexPath)
-        cell.textLabel?.text = itemArray[indexPath.row]
+
+        let item = itemArray[indexPath.row]
+        
+        cell.textLabel?.text = item.carNumber
+        
+// value = condition ? valueIfTrue : valueIfFalse
+        
+        cell.accessoryType = item.done ? .checkmark : .none
+        
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if  tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark{
-            tableView.cellForRow(at: indexPath)?.accessoryType = .none
-        }else{
-            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-        }
+        
+        itemArray[indexPath.row].done = !itemArray[indexPath.row].done
+        
+        tableView.reloadData()
         tableView.deselectRow(at: indexPath, animated: true)
     }
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -50,7 +66,11 @@ class CarNumViewController: UITableViewController, RecieveData{
     }
     
     func dataRecieved(data: String) {
-        self.itemArray.append(data)
+        
+        let newItem = Item()
+        newItem.carNumber = data
+        
+        self.itemArray.append(newItem)
         
         defaults.set(self.itemArray, forKey: "CarNumArray")
         

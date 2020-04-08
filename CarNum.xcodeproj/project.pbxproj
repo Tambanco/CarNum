@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5696737F243B4B1F00639D7A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696737E243B4B1F00639D7A /* AddViewController.swift */; };
-		56967381243B781D00639D7A /* dataForItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56967380243B781D00639D7A /* dataForItem.swift */; };
+		56967381243B781D00639D7A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56967380243B781D00639D7A /* Item.swift */; };
 		56D4868224392247003F0AFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868124392247003F0AFB /* AppDelegate.swift */; };
 		56D4868424392247003F0AFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868324392247003F0AFB /* SceneDelegate.swift */; };
 		56D4868624392247003F0AFB /* CarNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868524392247003F0AFB /* CarNumViewController.swift */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		5696737E243B4B1F00639D7A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = SOURCE_ROOT; };
-		56967380243B781D00639D7A /* dataForItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataForItem.swift; sourceTree = "<group>"; };
+		56967380243B781D00639D7A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		56D4867E24392247003F0AFB /* CarNum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarNum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D4868124392247003F0AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56D4868324392247003F0AFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,29 +43,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		56967379243B442B00639D7A /* Models */ = {
+		56967379243B442B00639D7A /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				56967380243B781D00639D7A /* dataForItem.swift */,
+				56967380243B781D00639D7A /* Item.swift */,
 			);
-			path = Models;
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
-		5696737A243B443D00639D7A /* View */ = {
+		5696737A243B443D00639D7A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				56D4868724392247003F0AFB /* Main.storyboard */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		5696737B243B445300639D7A /* Controller */ = {
+		5696737B243B445300639D7A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				56D4868524392247003F0AFB /* CarNumViewController.swift */,
 				5696737E243B4B1F00639D7A /* AddViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		56C0695D243DACC6005A31AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				56D4868D2439224C003F0AFB /* Assets.xcassets */,
+				56D4868F2439224C003F0AFB /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		56D4867524392247003F0AFB = {
@@ -89,11 +98,10 @@
 			children = (
 				56D4868124392247003F0AFB /* AppDelegate.swift */,
 				56D4868324392247003F0AFB /* SceneDelegate.swift */,
-				56967379243B442B00639D7A /* Models */,
-				5696737A243B443D00639D7A /* View */,
-				5696737B243B445300639D7A /* Controller */,
-				56D4868D2439224C003F0AFB /* Assets.xcassets */,
-				56D4868F2439224C003F0AFB /* LaunchScreen.storyboard */,
+				56967379243B442B00639D7A /* Data Model */,
+				5696737A243B443D00639D7A /* Views */,
+				5696737B243B445300639D7A /* Controllers */,
+				56C0695D243DACC6005A31AB /* Supporting Files */,
 				56D486922439224C003F0AFB /* Info.plist */,
 				56D4868A24392247003F0AFB /* CarNum.xcdatamodeld */,
 			);
@@ -173,7 +181,7 @@
 			files = (
 				5696737F243B4B1F00639D7A /* AddViewController.swift in Sources */,
 				56D4868624392247003F0AFB /* CarNumViewController.swift in Sources */,
-				56967381243B781D00639D7A /* dataForItem.swift in Sources */,
+				56967381243B781D00639D7A /* Item.swift in Sources */,
 				56D4868C24392247003F0AFB /* CarNum.xcdatamodeld in Sources */,
 				56D4868224392247003F0AFB /* AppDelegate.swift in Sources */,
 				56D4868424392247003F0AFB /* SceneDelegate.swift in Sources */,

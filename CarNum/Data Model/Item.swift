@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct dataForItem {
-    let carNumber: String
-    let dateMark: String
+class Item {
+    var carNumber: String = ""
+    var dateMark: String = ""
+    var done: Bool = false
 }
