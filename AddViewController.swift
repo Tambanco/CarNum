@@ -32,7 +32,9 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addNewItemButton(_ sender: UIButton) {
         
-        let totalData = "\(self.labelText.text!) DateMark: \(dataMark!)"
+        
+//        \(dataMark!)
+        let totalData = "\(self.labelText.text!)"
         
         labelText.endEditing(true)
         delegate?.dataRecieved(data: totalData)

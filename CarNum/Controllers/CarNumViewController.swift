@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class CarNumViewController: UITableViewController, RecieveData{
     
     var itemArray = [Item]()
     
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(dataFilePath!)
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         loadItems()
         
@@ -33,7 +34,7 @@ class CarNumViewController: UITableViewController, RecieveData{
         
         cell.textLabel?.text = item.carNumber
         
-        // value = condition ? valueIfTrue : valueIfFalse
+        // TERNARY OPERATOR value = condition ? valueIfTrue : valueIfFalse
         
         cell.accessoryType = item.done ? .checkmark : .none
         
@@ -41,7 +42,11 @@ class CarNumViewController: UITableViewController, RecieveData{
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+//        context.delete(itemArray[indexPath.row])
+//        itemArray.remove(at: indexPath.row)
+        
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
+        
         saveItems()
         
         tableView.reloadData()
@@ -60,37 +65,30 @@ class CarNumViewController: UITableViewController, RecieveData{
     
     func dataRecieved(data: String) {
         
-        let newItem = Item()
+        let newItem = Item(context: context)
         newItem.carNumber = data
+        newItem.done = false
         self.itemArray.append(newItem)
+        
         saveItems()
-        
-        
-        //        defaults.set(self.itemArray, forKey: "CarNumArray")
         
         self.tableView.reloadData()
     }
     func saveItems(){
         
-        let encoder = PropertyListEncoder()
         do{
-            let data = try encoder.encode(itemArray)
-            try data.write(to: dataFilePath!)
+            try context.save()
         }catch{
-            print("Error encoding item array, \(error)")
+            print("Error saving context \(error)")
         }
-        
     }
     
     func loadItems (){
-        if let data = try? Data(contentsOf: dataFilePath!){
-            let decoder = PropertyListDecoder()
-            do{
-                itemArray = try decoder.decode([Item].self, from: data)
-            }catch{
-                print("Error decoding item array \(error)")
-            }
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        do{
+            itemArray = try context.fetch(request)
+        }catch{
+            print("Error fetching data from context: \(error)")
         }
     }
 }
-
