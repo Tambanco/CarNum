@@ -23,6 +23,9 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        labelText.layer.cornerRadius = 5.0
+        labelText.layer.borderWidth = 1.0
         labelText.delegate = self
         
     }
