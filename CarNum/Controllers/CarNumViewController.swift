@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import SwipeCellKit
+import ChameleonFramework
 
 class CarNumViewController: UITableViewController, RecieveData{
     
@@ -28,17 +29,15 @@ class CarNumViewController: UITableViewController, RecieveData{
         return itemArray.count
     }
     
-    //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! SwipeTableViewCell
-    //        cell.delegate = self
-    //        return cell
-    //    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CarNumCell", for: indexPath) as! SwipeTableViewCell
         
         let item = itemArray[indexPath.row]
+        
+        cell.backgroundColor = UIColor.randomFlat()
+        
         
         cell.textLabel?.text = item.carNumber
         
