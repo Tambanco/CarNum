@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SwipeCellKit
 
 class CarNumViewController: UITableViewController, RecieveData{
     
@@ -17,16 +18,25 @@ class CarNumViewController: UITableViewController, RecieveData{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         loadItems()
+        
+        tableView.rowHeight = 80.0
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
     }
     
+    //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! SwipeTableViewCell
+    //        cell.delegate = self
+    //        return cell
+    //    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CarNumCell", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CarNumCell", for: indexPath) as! SwipeTableViewCell
         
         let item = itemArray[indexPath.row]
         
@@ -36,12 +46,12 @@ class CarNumViewController: UITableViewController, RecieveData{
         
         cell.accessoryType = item.done ? .checkmark : .none
         
+        cell.delegate = self
+        
+        
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        context.delete(itemArray[indexPath.row])
-//        itemArray.remove(at: indexPath.row)
         
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
         
@@ -98,7 +108,7 @@ extension CarNumViewController: UISearchBarDelegate{
         request.predicate = NSPredicate(format: "carNumber CONTAINS[cd] %@", searchBar.text!)
         
         request.sortDescriptors = [NSSortDescriptor(key: "carNumber", ascending: true)]
-              
+        
         loadItems(with: request)
     }
     
@@ -110,5 +120,31 @@ extension CarNumViewController: UISearchBarDelegate{
                 searchBar.resignFirstResponder()
             }
         }
+    }
+}
+
+//MARK: - Swipe Cell Delegate Methods
+extension CarNumViewController: SwipeTableViewCellDelegate{
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            // handle action by updating model with deletion
+            
+            self.context.delete(self.itemArray[indexPath.row])
+            self.itemArray.remove(at: indexPath.row)
+            
+            self.saveItems()
+        }
+        
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "delete-icon")
+        
+        return [deleteAction]
+    }
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+        options.expansionStyle = .destructive
+        return options
     }
 }
