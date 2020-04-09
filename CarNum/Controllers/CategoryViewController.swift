@@ -37,6 +37,22 @@ class CategoryViewController: UITableViewController{
         
         return cell
     }
+    
+    //MARK: - TableView delegate method
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToCarNumbers", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+//        if segue.identifier == "goToCarNumbers"{
+        let destinationVC = segue.destination as! CarNumViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow{
+            destinationVC.selectedCategory = categories[indexPath.row]
+        }
+    }
 
     //MARK: - Data manipulation method
     
