@@ -176,7 +176,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="pAy-PM-5g6" kind="show" id="ibz-w2-805"/>
+                        <segue destination="pAy-PM-5g6" kind="show" identifier="goToCarNumbers" id="ibz-w2-805"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="681-0d-ITB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
