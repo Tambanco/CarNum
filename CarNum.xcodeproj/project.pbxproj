@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50AF43BB3AA47FE22D56ED78 /* Pods_CarNum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CA4AF45C12038B59B9CD52 /* Pods_CarNum.framework */; };
 		5696737F243B4B1F00639D7A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696737E243B4B1F00639D7A /* AddViewController.swift */; };
+		56C8F942243FA86900AC8D0F /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C8F941243FA86900AC8D0F /* CategoryViewController.swift */; };
 		56D4868224392247003F0AFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868124392247003F0AFB /* AppDelegate.swift */; };
 		56D4868424392247003F0AFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868324392247003F0AFB /* SceneDelegate.swift */; };
 		56D4868624392247003F0AFB /* CarNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4868524392247003F0AFB /* CarNumViewController.swift */; };
@@ -22,6 +23,7 @@
 		03CA4AF45C12038B59B9CD52 /* Pods_CarNum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarNum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49027B3220C9801C880BF9A3 /* Pods-CarNum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarNum.debug.xcconfig"; path = "Target Support Files/Pods-CarNum/Pods-CarNum.debug.xcconfig"; sourceTree = "<group>"; };
 		5696737E243B4B1F00639D7A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = SOURCE_ROOT; };
+		56C8F941243FA86900AC8D0F /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		56D4867E24392247003F0AFB /* CarNum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarNum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D4868124392247003F0AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56D4868324392247003F0AFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		5696737B243B445300639D7A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				56C8F941243FA86900AC8D0F /* CategoryViewController.swift */,
 				56D4868524392247003F0AFB /* CarNumViewController.swift */,
 				5696737E243B4B1F00639D7A /* AddViewController.swift */,
 			);
@@ -248,6 +251,7 @@
 				56D4868624392247003F0AFB /* CarNumViewController.swift in Sources */,
 				56D4868C24392247003F0AFB /* CarNum.xcdatamodeld in Sources */,
 				56D4868224392247003F0AFB /* AppDelegate.swift in Sources */,
+				56C8F942243FA86900AC8D0F /* CategoryViewController.swift in Sources */,
 				56D4868424392247003F0AFB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
