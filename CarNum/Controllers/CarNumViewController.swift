@@ -31,6 +31,7 @@ class CarNumViewController: UITableViewController, RecieveData{
         tableView.separatorStyle = .singleLine
         
         
+        
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
@@ -42,6 +43,8 @@ class CarNumViewController: UITableViewController, RecieveData{
         let cell = tableView.dequeueReusableCell(withIdentifier: "CarNumCell", for: indexPath) as! SwipeTableViewCell
         
         let item = itemArray[indexPath.row]
+        
+        cell.accessoryType = .detailButton
         
         cell.backgroundColor = UIColor(hexString: itemArray[indexPath.row].colourOfCell ?? "30D158")
         
@@ -55,7 +58,7 @@ class CarNumViewController: UITableViewController, RecieveData{
         
         // TERNARY OPERATOR value = condition ? valueIfTrue : valueIfFalse
         
-        cell.accessoryType = item.done ? .checkmark : .none
+//        cell.accessoryType = item.done ? .checkmark : .none
         
         cell.delegate = self
         
