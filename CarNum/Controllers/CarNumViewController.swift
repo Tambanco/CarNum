@@ -23,6 +23,8 @@ class CarNumViewController: UITableViewController, RecieveData{
         loadItems()
         
         tableView.rowHeight = 80.0
+        tableView.separatorStyle = .singleLine
+        
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,8 +38,13 @@ class CarNumViewController: UITableViewController, RecieveData{
         
         let item = itemArray[indexPath.row]
         
-        cell.backgroundColor = UIColor.randomFlat()
+        cell.backgroundColor = UIColor(hexString: itemArray[indexPath.row].colourOfCell ?? "30D158")
         
+        cell.backgroundColor = UIColor.flatGreenColorDark()?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(itemArray.count))
+        
+//        cell.textLabel?.text = UIColor(contrastingBlackOrWhiteColorOn: itemArray[indexPath.row].colourOfCell, isFlat: true)
+                
+//        cell.backgroundColor = UIColor.randomFlat()
         
         cell.textLabel?.text = item.carNumber
         
