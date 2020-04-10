@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import ChameleonFramework
 
 class CategoryViewController: SwipeTableViewController{
     
@@ -35,6 +36,14 @@ class CategoryViewController: SwipeTableViewController{
         
         cell.textLabel?.text = categories[indexPath.row].name
         
+        if let colour = UIColor.flatWhite()?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(categories.count)){
+            cell.backgroundColor = colour
+            
+//            cell.textLabel?.textColor = ContrastColor(colour, isFlat: true)
+        }
+        
+        cell.backgroundColor = UIColor(hexString: categories[indexPath.row].colourOfCell ?? "30D158")
+    
         return cell
     }
     
@@ -89,7 +98,7 @@ class CategoryViewController: SwipeTableViewController{
             print("Error saving context \(error)")
         }
         
-//          self.saveItems()
+        //          self.saveItems()
     }
     
     //MARK: - Add new category

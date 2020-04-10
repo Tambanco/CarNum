@@ -38,11 +38,13 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
         
         let item = itemArray[indexPath.row]
         
-        cell.accessoryType = .detailButton
         
         cell.backgroundColor = UIColor(hexString: itemArray[indexPath.row].colourOfCell ?? "30D158")
         
-        cell.backgroundColor = UIColor.flatGreenColorDark()?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(itemArray.count))
+        if let colour = UIColor.flatGreenColorDark()?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(itemArray.count)){
+            
+            cell.backgroundColor = colour
+        }
         
 //        cell.textLabel?.text = UIColor(contrastingBlackOrWhiteColorOn: itemArray[indexPath.row].colourOfCell, isFlat: true)
                 
