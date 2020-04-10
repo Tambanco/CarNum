@@ -15,6 +15,8 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
     
     var itemArray = [Item]()
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var selectedCategory: Category?{
         didSet{
             loadItems()
@@ -25,6 +27,22 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+        
+        
+        
+        override func viewWillAppear(_ animated: Bool){
+            if let colourHex = selectedCategory?.colourOfCell{
+                
+                title = selectedCategory!.name
+                
+                guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
+                
+                navBar.backgroundColor = UIColor(hexString: colourHex)
+                searchBar.barTintColor = UIColor(hexString: colourHex)
+                
+                navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            }
         
     }
     
@@ -141,29 +159,3 @@ extension CarNumViewController: UISearchBarDelegate{
     }
 }
 
-////MARK: - Swipe Cell Delegate Methods
-//
-//extension CarNumViewController: SwipeTableViewCellDelegate{
-//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
-//        guard orientation == .right else { return nil }
-//
-//        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-//            // handle action by updating model with deletion
-//
-//            self.context.delete(self.itemArray[indexPath.row])
-//            self.itemArray.remove(at: indexPath.row)
-//
-//            self.saveItems()
-//        }
-//
-//        // customize the action appearance
-//        deleteAction.image = UIImage(named: "delete-icon")
-//
-//        return [deleteAction]
-//    }
-//    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
-//        var options = SwipeOptions()
-//        options.expansionStyle = .destructive
-//        return options
-//    }
-//}

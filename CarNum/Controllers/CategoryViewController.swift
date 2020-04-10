@@ -23,6 +23,13 @@ class CategoryViewController: SwipeTableViewController{
         loadCategories()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
+        
+        navBar.backgroundColor = UIColor(hexString: "30D158")
+    }
+    
+
     
     //MARK: - TableView datasourse methods
     
@@ -121,11 +128,3 @@ class CategoryViewController: SwipeTableViewController{
     }
     
 }
-//func saveItems(){
-//
-//     do{
-//         try context.save()
-//     }catch{
-//         print("Error saving context \(error)")
-//     }
-// }
