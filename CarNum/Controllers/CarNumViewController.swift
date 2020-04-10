@@ -25,8 +25,11 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
     }
+    
+    //MARK: - TablView data source methods
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
     }
@@ -35,41 +38,22 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
-        
         let item = itemArray[indexPath.row]
-        
-        
-        cell.backgroundColor = UIColor(hexString: itemArray[indexPath.row].colourOfCell ?? "30D158")
-        
-        if let colour = UIColor.flatGreenColorDark()?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(itemArray.count)){
-            
-            cell.backgroundColor = colour
-        }
-        
-//        cell.textLabel?.text = UIColor(contrastingBlackOrWhiteColorOn: itemArray[indexPath.row].colourOfCell, isFlat: true)
-                
-//        cell.backgroundColor = UIColor.randomFlat()
         
         cell.textLabel?.text = item.carNumber
         
-        // TERNARY OPERATOR value = condition ? valueIfTrue : valueIfFalse
         
-//        cell.accessoryType = item.done ? .checkmark : .none
-        
-//        cell.delegate = self
+        if let colour = UIColor(hexString: selectedCategory!.colourOfCell)?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(itemArray.count)){
+            
+            cell.backgroundColor = colour
+            cell.textLabel?.textColor = UIColor.init(contrastingBlackOrWhiteColorOn: colour, isFlat: true)
+        }
         
         
         return cell
+        
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        itemArray[indexPath.row].done = !itemArray[indexPath.row].done
-        
-        saveItems()
-        
-        tableView.reloadData()
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+    
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "addNewItem", sender: self)
     }
@@ -122,14 +106,14 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
     
     override func updateModel(at indexPath: IndexPath) {
         
-           self.context.delete(self.itemArray[indexPath.row])
-             self.itemArray.remove(at: indexPath.row)
-             
-             do{
-                 try self.context.save()
-             }catch{
-                 print("Error saving context \(error)")
-             }
+        self.context.delete(self.itemArray[indexPath.row])
+        self.itemArray.remove(at: indexPath.row)
+        
+        do{
+            try self.context.save()
+        }catch{
+            print("Error saving context \(error)")
+        }
     }
 }
 //MARK: - SearchBar methods

@@ -34,16 +34,12 @@ class CategoryViewController: SwipeTableViewController{
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
-        cell.textLabel?.text = categories[indexPath.row].name
+        cell.textLabel?.text = categories[indexPath.row].name ?? "Не добавлено ни одного типа"
         
-        if let colour = UIColor.flatWhite()?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(categories.count)){
-            cell.backgroundColor = colour
-            
-//            cell.textLabel?.textColor = ContrastColor(colour, isFlat: true)
-        }
+        cell.backgroundColor = UIColor(hexString: categories[indexPath.row].colourOfCell ?? "30D151")
         
-        cell.backgroundColor = UIColor(hexString: categories[indexPath.row].colourOfCell ?? "30D158")
-    
+        cell.textLabel?.textColor = UIColor.init(contrastingBlackOrWhiteColorOn: cell.backgroundColor, isFlat: true)
+        
         return cell
     }
     
@@ -98,7 +94,6 @@ class CategoryViewController: SwipeTableViewController{
             print("Error saving context \(error)")
         }
         
-        //          self.saveItems()
     }
     
     //MARK: - Add new category
@@ -110,6 +105,7 @@ class CategoryViewController: SwipeTableViewController{
             
             let newCategory = Category(context: self.context)
             newCategory.name = textField.text!
+            newCategory.colourOfCell = UIColor.randomFlat()?.hexValue()
             
             self.categories.append(newCategory)
             
