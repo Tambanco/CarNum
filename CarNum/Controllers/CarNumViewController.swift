@@ -37,7 +37,6 @@ class CarNumViewController: UITableViewController, RecieveData{
         return itemArray.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CarNumCell", for: indexPath) as! SwipeTableViewCell
