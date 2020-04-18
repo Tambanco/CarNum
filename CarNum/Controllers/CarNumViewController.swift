@@ -29,8 +29,6 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
         super.viewDidLoad()
     }
         
-        
-        
         override func viewWillAppear(_ animated: Bool){
             if let colourHex = selectedCategory?.colourOfCell{
                 
@@ -66,7 +64,6 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
             cell.backgroundColor = colour
             cell.textLabel?.textColor = UIColor.init(contrastingBlackOrWhiteColorOn: colour, isFlat: true)
         }
-        
         
         return cell
         
