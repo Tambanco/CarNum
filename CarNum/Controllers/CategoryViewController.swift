@@ -16,6 +16,7 @@ class CategoryViewController: SwipeTableViewController{
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    let bgColor = UIColor.randomFlat()?.hexValue()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +27,16 @@ class CategoryViewController: SwipeTableViewController{
     override func viewWillAppear(_ animated: Bool) {
         guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
         
-        navBar.backgroundColor = UIColor(hexString: "30D158")
+        //        navBar.backgroundColor = UIColor(hexString: "30D158")
+        navBar.backgroundColor = UIColor(hexString: "\(bgColor ?? "3A4862")")
+        view.backgroundColor = UIColor(hexString: "\(bgColor ?? "3A4862")")
+        if let index = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: index, animated: true)
+        }
+        
     }
     
-
+    
     
     //MARK: - TableView datasourse methods
     
@@ -43,7 +50,7 @@ class CategoryViewController: SwipeTableViewController{
         
         cell.textLabel?.text = categories[indexPath.row].name ?? "Не добавлено ни одного типа"
         
-        cell.backgroundColor = UIColor(hexString: categories[indexPath.row].colourOfCell ?? "30D151")
+        cell.backgroundColor = UIColor(hexString: categories[indexPath.row].colourOfCell ?? "3A4862")
         
         cell.textLabel?.textColor = UIColor.init(contrastingBlackOrWhiteColorOn: cell.backgroundColor, isFlat: true)
         
@@ -58,7 +65,6 @@ class CategoryViewController: SwipeTableViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        //        if segue.identifier == "goToCarNumbers"{
         let destinationVC = segue.destination as! CarNumViewController
         
         if let indexPath = tableView.indexPathForSelectedRow{
