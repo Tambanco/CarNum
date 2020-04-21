@@ -16,27 +16,20 @@ class CategoryViewController: SwipeTableViewController{
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    let bgColor = UIColor.randomFlat()?.hexValue()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadCategories()
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
         
-        //        navBar.backgroundColor = UIColor(hexString: "30D158")
-        navBar.backgroundColor = UIColor(hexString: "\(bgColor ?? "3A4862")")
-        view.backgroundColor = UIColor(hexString: "\(bgColor ?? "3A4862")")
+        navBar.backgroundColor = UIColor(hexString: "00b894")
+        view.backgroundColor = UIColor(hexString: "00b894")
         if let index = self.tableView.indexPathForSelectedRow{
             self.tableView.deselectRow(at: index, animated: true)
         }
-        
     }
-    
-    
     
     //MARK: - TableView datasourse methods
     
@@ -49,9 +42,7 @@ class CategoryViewController: SwipeTableViewController{
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         cell.textLabel?.text = categories[indexPath.row].name ?? "Не добавлено ни одного типа"
-        
         cell.backgroundColor = UIColor(hexString: categories[indexPath.row].colourOfCell ?? "3A4862")
-        
         cell.textLabel?.textColor = UIColor.init(contrastingBlackOrWhiteColorOn: cell.backgroundColor, isFlat: true)
         
         return cell
@@ -66,7 +57,6 @@ class CategoryViewController: SwipeTableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let destinationVC = segue.destination as! CarNumViewController
-        
         if let indexPath = tableView.indexPathForSelectedRow{
             destinationVC.selectedCategory = categories[indexPath.row]
         }
@@ -121,13 +111,13 @@ class CategoryViewController: SwipeTableViewController{
             newCategory.colourOfCell = UIColor.randomFlat()?.hexValue()
             
             self.categories.append(newCategory)
-            
             self.saveCategories()
-            
         }
+        alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
         alert.addAction(action)
         alert.addTextField { (field) in
             textField = field
+            textField.autocapitalizationType = .sentences
             textField.placeholder = "Тип кузова"
         }
         present(alert, animated: true, completion: nil)

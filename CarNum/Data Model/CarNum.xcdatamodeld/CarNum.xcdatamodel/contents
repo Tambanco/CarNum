@@ -8,12 +8,10 @@
     <entity name="Item" representedClassName=".Item" syncable="YES" codeGenerationType="class">
         <attribute name="carNumber" attributeType="String"/>
         <attribute name="colourOfCell" optional="YES" attributeType="String"/>
-        <attribute name="dateMark" optional="YES" attributeType="String"/>
-        <attribute name="done" attributeType="Boolean" usesScalarValueType="YES"/>
         <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="bodyType" inverseEntity="Category"/>
     </entity>
     <elements>
         <element name="Category" positionX="-63" positionY="9" width="128" height="88"/>
-        <element name="Item" positionX="243.82421875" positionY="60.77734375" width="128" height="118"/>
+        <element name="Item" positionX="243.82421875" positionY="60.77734375" width="128" height="88"/>
     </elements>
 </model>

@@ -18,22 +18,18 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     var data = ""
     
     @IBOutlet weak var labelText: UITextField!
-    @IBOutlet weak var dataMark: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         labelText.layer.cornerRadius = 5.0
         labelText.layer.borderWidth = 1.0
         labelText.delegate = self
+        view.backgroundColor = UIColor(hexString: "#00b894")
         
     }
-    
     @IBAction func addNewItemButton(_ sender: UIButton) {
         
-        
-//        \(dataMark!)
         let totalData = "\(self.labelText.text!)"
         
         labelText.endEditing(true)

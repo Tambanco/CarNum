@@ -27,21 +27,20 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.separatorStyle = .singleLine
     }
-        
-        override func viewWillAppear(_ animated: Bool){
-            if let colourHex = selectedCategory?.colourOfCell{
-                
-                title = selectedCategory!.name
-                
-                guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
-                
-                navBar.backgroundColor = UIColor(hexString: colourHex)
-                searchBar.barTintColor = UIColor(hexString: colourHex)
-                
-                navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-            }
-        
+    
+    override func viewWillAppear(_ animated: Bool){
+        if let colourHex = selectedCategory?.colourOfCell{
+            
+            title = selectedCategory!.name
+            
+            guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
+            
+            navBar.backgroundColor = UIColor(hexString: colourHex)
+            view.backgroundColor = UIColor(hexString: colourHex)
+            searchBar.barTintColor = UIColor(hexString: colourHex)
+        }
     }
     
     //MARK: - TablView data source methods
@@ -53,20 +52,16 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
-        
         let item = itemArray[indexPath.row]
         
         cell.textLabel?.text = item.carNumber
-        
         
         if let colour = UIColor(hexString: selectedCategory!.colourOfCell)?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(itemArray.count)){
             
             cell.backgroundColor = colour
             cell.textLabel?.textColor = UIColor.init(contrastingBlackOrWhiteColorOn: colour, isFlat: true)
         }
-        
         return cell
-        
     }
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -84,7 +79,6 @@ class CarNumViewController: SwipeTableViewController, RecieveData{
         
         let newItem = Item(context: context)
         newItem.carNumber = data
-        newItem.done = false
         newItem.parentCategory = selectedCategory
         self.itemArray.append(newItem)
         
