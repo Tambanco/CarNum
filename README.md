@@ -1,5 +1,5 @@
 # CarNum
-App can help you to remember car numbers
-Назначение приложения такое - видишь номер авто на улице(стоянке и проч.), хочешь записать номер, пока не забыл. Открываешь, выбираешь тип кузова, записываешь номер, нажимаешь добавить.  
-![alt text][logo]
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+App can help you to remember car numbers.
+On the start screen, you can add or remove car body categories. You can add a car number in each category. Data is stored on the local device using Core Data. In the "Body Type" category, the cell color is set randomly, and the color within the category is inherited from the generic category and colored as a gradient.
+
+
