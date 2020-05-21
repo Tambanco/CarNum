@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Номера-->
+        <!--Registration Plates-->
         <scene sceneID="nYm-Pk-QMl">
             <objects>
                 <tableViewController id="pAy-PM-5g6" customClass="CarNumViewController" customModule="CarNum" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <outlet property="dataSource" destination="pAy-PM-5g6" id="vOz-0P-Ve5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Номера" id="9fG-It-rhT">
+                    <navigationItem key="navigationItem" title="Registration Plates" id="9fG-It-rhT">
                         <barButtonItem key="backBarButtonItem" id="Wn2-tD-b8l"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="haD-1Z-lkI">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,31 +66,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="xwN-j0-90U">
-                                <rect key="frame" x="67" y="366.66666666666669" width="280" height="108.66666666666669"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="xwN-j0-90U">
+                                <rect key="frame" x="83.666666666666686" y="366.33333333333331" width="247" height="109.66666666666669"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="аа999а77" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idq-RL-LZV">
-                                        <rect key="frame" x="58" y="0.0" width="164" height="45.666666666666664"/>
+                                        <rect key="frame" x="41.333333333333329" y="0.0" width="164" height="45.666666666666664"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="continue"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="RUj-Kd-usl">
-                                        <rect key="frame" x="0.0" y="72.666666666666629" width="280" height="36"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="RUj-Kd-usl">
+                                        <rect key="frame" x="0.0" y="73.666666666666686" width="247" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uk-pH-bqk">
-                                                <rect key="frame" x="0.0" y="0.0" width="91" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Отменить"/>
+                                                <state key="normal" title="Cancel"/>
                                                 <connections>
                                                     <action selector="cancelButtonPressed:" destination="6tK-Qh-DQe" eventType="touchUpInside" id="OCU-zD-l8f"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UI5-1i-fTf">
-                                                <rect key="frame" x="191" y="0.0" width="89" height="36"/>
+                                                <rect key="frame" x="211" y="0.0" width="36" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Добавить"/>
+                                                <state key="normal" title="Add"/>
                                                 <connections>
                                                     <action selector="addNewItemButton:" destination="6tK-Qh-DQe" eventType="touchUpInside" id="UNN-Xf-t6m"/>
                                                 </connections>
@@ -137,7 +137,7 @@
             </objects>
             <point key="canvasLocation" x="-658" y="123"/>
         </scene>
-        <!--Тип кузова-->
+        <!--Car Body Types-->
         <scene sceneID="v6q-CC-jik">
             <objects>
                 <tableViewController id="iIL-Ug-off" customClass="CategoryViewController" customModule="CarNum" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,7 +160,7 @@
                             <outlet property="delegate" destination="iIL-Ug-off" id="4h3-MH-bWn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Тип кузова" id="mwU-W8-sM5">
+                    <navigationItem key="navigationItem" title="Car Body Types" id="mwU-W8-sM5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QKP-ot-kKm">
                             <connections>
                                 <action selector="addCategoryPressed:" destination="iIL-Ug-off" id="Qxf-XH-umu"/>
