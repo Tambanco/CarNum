@@ -143,10 +143,10 @@ class CarNumViewController: SwipeTableViewController, RecieveData
 }
 
 //MARK: - SearchBar methods
-extension CarNumViewController: UISearchBarDelegate{
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+extension CarNumViewController: UISearchBarDelegate
+{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
         let predicate = NSPredicate(format: "carNumber CONTAINS[cd] %@", searchBar.text!)
         
@@ -155,11 +155,13 @@ extension CarNumViewController: UISearchBarDelegate{
         loadItems(with: request, predicate: predicate)
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text?.count == 0{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
+    {
+        if searchBar.text?.count == 0
+        {
             loadItems()
-            
-            DispatchQueue.main.async{
+            DispatchQueue.main.async
+            {
                 searchBar.resignFirstResponder()
             }
         }
