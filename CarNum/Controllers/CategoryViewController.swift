@@ -12,16 +12,17 @@ import ChameleonFramework
 
 class CategoryViewController: SwipeTableViewController
 {
-    
     // MARK: - Properties
     var categories = [Category]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    // MARK: - Life cycle
     override func viewDidLoad()
     {
         super.viewDidLoad()
         loadCategories()
     }
+    
     override func viewWillAppear(_ animated: Bool)
     {
         guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}

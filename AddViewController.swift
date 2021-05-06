@@ -28,8 +28,7 @@ class AddViewController: UIViewController, UITextFieldDelegate
         labelText.layer.cornerRadius = 5.0
         labelText.layer.borderWidth = 1.0
         labelText.delegate = self
-        view.backgroundColor = UIColor(hexString: "#00b894")
-        
+        view.backgroundColor = UIColor(hexString: "#00b894")  
     }
     
     @IBAction func addNewItemButton(_ sender: UIButton)
@@ -46,15 +45,9 @@ class AddViewController: UIViewController, UITextFieldDelegate
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func pickerChanged(_ sender: UIDatePicker)
-    {
-        
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         labelText.endEditing(true)
         return true
     }
 }
-
