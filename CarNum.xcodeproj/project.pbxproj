@@ -50,18 +50,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		56967379243B442B00639D7A /* Data Model */ = {
+		56967379243B442B00639D7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				56D4868A24392247003F0AFB /* CarNum.xcdatamodeld */,
 			);
-			path = "Data Model";
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5696737A243B443D00639D7A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				56D4868724392247003F0AFB /* Main.storyboard */,
+				56D4868F2439224C003F0AFB /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -80,8 +81,9 @@
 		56C0695D243DACC6005A31AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				56D4868324392247003F0AFB /* SceneDelegate.swift */,
+				56D4868124392247003F0AFB /* AppDelegate.swift */,
 				56D4868D2439224C003F0AFB /* Assets.xcassets */,
-				56D4868F2439224C003F0AFB /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -107,9 +109,7 @@
 		56D4868024392247003F0AFB /* CarNum */ = {
 			isa = PBXGroup;
 			children = (
-				56D4868124392247003F0AFB /* AppDelegate.swift */,
-				56D4868324392247003F0AFB /* SceneDelegate.swift */,
-				56967379243B442B00639D7A /* Data Model */,
+				56967379243B442B00639D7A /* Model */,
 				5696737A243B443D00639D7A /* Views */,
 				5696737B243B445300639D7A /* Controllers */,
 				56C0695D243DACC6005A31AB /* Supporting Files */,
