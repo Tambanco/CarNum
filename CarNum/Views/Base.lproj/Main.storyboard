@@ -11,7 +11,7 @@
         <!--Registration Plates-->
         <scene sceneID="nYm-Pk-QMl">
             <objects>
-                <tableViewController id="pAy-PM-5g6" customClass="CarNumViewController" customModule="CarNum" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CarNumViewController" id="pAy-PM-5g6" customClass="CarNumViewController" customModule="CarNum" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q0v-qc-tPR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
