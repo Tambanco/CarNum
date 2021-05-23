@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		491CF2E426594FC600C1B48A /* CarNumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CF2E326594FC600C1B48A /* CarNumTests.swift */; };
+		49357B1F265A33C2002151F8 /* CategoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49357B1E265A33C2002151F8 /* CategoryViewControllerTests.swift */; };
 		50AF43BB3AA47FE22D56ED78 /* Pods_CarNum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CA4AF45C12038B59B9CD52 /* Pods_CarNum.framework */; };
 		566F4E0E24405B2100215F0A /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F4E0D24405B2100215F0A /* SwipeTableViewController.swift */; };
 		5696737F243B4B1F00639D7A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696737E243B4B1F00639D7A /* AddViewController.swift */; };
@@ -37,6 +38,7 @@
 		491CF2E126594FC600C1B48A /* CarNumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarNumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		491CF2E326594FC600C1B48A /* CarNumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNumTests.swift; sourceTree = "<group>"; };
 		491CF2E526594FC600C1B48A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49357B1E265A33C2002151F8 /* CategoryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewControllerTests.swift; sourceTree = "<group>"; };
 		566F4E0D24405B2100215F0A /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		5696737E243B4B1F00639D7A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = SOURCE_ROOT; };
 		56C8F941243FA86900AC8D0F /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -74,10 +76,19 @@
 		491CF2E226594FC600C1B48A /* CarNumTests */ = {
 			isa = PBXGroup;
 			children = (
+				49357B13265A32A3002151F8 /* Controller */,
 				491CF2E326594FC600C1B48A /* CarNumTests.swift */,
 				491CF2E526594FC600C1B48A /* Info.plist */,
 			);
 			path = CarNumTests;
+			sourceTree = "<group>";
+		};
+		49357B13265A32A3002151F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				49357B1E265A33C2002151F8 /* CategoryViewControllerTests.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		56967379243B442B00639D7A /* Model */ = {
@@ -122,10 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				56D4868024392247003F0AFB /* CarNum */,
+				491CF2E226594FC600C1B48A /* CarNumTests */,
 				56D4867F24392247003F0AFB /* Products */,
 				824527F591781A50477C2D1E /* Pods */,
 				E72E494E5057DD99AEC3D907 /* Frameworks */,
-				491CF2E226594FC600C1B48A /* CarNumTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49357B1F265A33C2002151F8 /* CategoryViewControllerTests.swift in Sources */,
 				491CF2E426594FC600C1B48A /* CarNumTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
