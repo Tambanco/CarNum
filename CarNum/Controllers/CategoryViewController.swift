@@ -27,21 +27,18 @@ class CategoryViewController: SwipeTableViewController
         guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
         
         navBar.backgroundColor = UIColor(hexString: "00b894")
-        view.backgroundColor = UIColor(hexString: "00b894")
-        if let index = self.tableView.indexPathForSelectedRow
-        {
+        view.backgroundColor = UIColor(hexString: "00b894")3
+        if let index = self.tableView.indexPathForSelectedRow {
             self.tableView.deselectRow(at: index, animated: true)
         }
     }
     
     //MARK: - TableView datasourse methods
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         cell.textLabel?.text = categories[indexPath.row].name ?? "There are no types"
