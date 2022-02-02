@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49168C02265BB409007E4154 /* CarNumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49168C01265BB409007E4154 /* CarNumUITests.swift */; };
 		491CF2E426594FC600C1B48A /* CarNumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CF2E326594FC600C1B48A /* CarNumTests.swift */; };
 		49357B1F265A33C2002151F8 /* CategoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49357B1E265A33C2002151F8 /* CategoryViewControllerTests.swift */; };
 		49357B23265A3517002151F8 /* CarNumViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49357B22265A3517002151F8 /* CarNumViewControllerTests.swift */; };
+		498989A9265BB4B6002F7C54 /* CarNumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498989A8265BB4B6002F7C54 /* CarNumUITests.swift */; };
 		50AF43BB3AA47FE22D56ED78 /* Pods_CarNum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CA4AF45C12038B59B9CD52 /* Pods_CarNum.framework */; };
 		566F4E0E24405B2100215F0A /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F4E0D24405B2100215F0A /* SwipeTableViewController.swift */; };
 		5696737F243B4B1F00639D7A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696737E243B4B1F00639D7A /* AddViewController.swift */; };
@@ -24,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		49168C04265BB409007E4154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56D4867624392247003F0AFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56D4867D24392247003F0AFB;
+			remoteInfo = CarNum;
+		};
 		491CF2E626594FC600C1B48A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 56D4867624392247003F0AFB /* Project object */;
@@ -36,11 +45,15 @@
 /* Begin PBXFileReference section */
 		03CA4AF45C12038B59B9CD52 /* Pods_CarNum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarNum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49027B3220C9801C880BF9A3 /* Pods-CarNum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarNum.debug.xcconfig"; path = "Target Support Files/Pods-CarNum/Pods-CarNum.debug.xcconfig"; sourceTree = "<group>"; };
+		49168BFF265BB409007E4154 /* CarNumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarNumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49168C01265BB409007E4154 /* CarNumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNumUITests.swift; sourceTree = "<group>"; };
+		49168C03265BB409007E4154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491CF2E126594FC600C1B48A /* CarNumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarNumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		491CF2E326594FC600C1B48A /* CarNumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNumTests.swift; sourceTree = "<group>"; };
 		491CF2E526594FC600C1B48A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49357B1E265A33C2002151F8 /* CategoryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewControllerTests.swift; sourceTree = "<group>"; };
 		49357B22265A3517002151F8 /* CarNumViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNumViewControllerTests.swift; sourceTree = "<group>"; };
+		498989A8265BB4B6002F7C54 /* CarNumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarNumUITests.swift; path = ../../../Practice/ToDoApp/ToDoAppTests/Controller/CarNumUITests.swift; sourceTree = "<group>"; };
 		566F4E0D24405B2100215F0A /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		5696737E243B4B1F00639D7A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = SOURCE_ROOT; };
 		56C8F941243FA86900AC8D0F /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +70,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		49168BFC265BB409007E4154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		491CF2DE26594FC600C1B48A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,6 +95,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49168C00265BB409007E4154 /* CarNumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				49168C01265BB409007E4154 /* CarNumUITests.swift */,
+				498989A8265BB4B6002F7C54 /* CarNumUITests.swift */,
+				49168C03265BB409007E4154 /* Info.plist */,
+			);
+			path = CarNumUITests;
+			sourceTree = "<group>";
+		};
 		491CF2E226594FC600C1B48A /* CarNumTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +167,7 @@
 			children = (
 				56D4868024392247003F0AFB /* CarNum */,
 				491CF2E226594FC600C1B48A /* CarNumTests */,
+				49168C00265BB409007E4154 /* CarNumUITests */,
 				56D4867F24392247003F0AFB /* Products */,
 				824527F591781A50477C2D1E /* Pods */,
 				E72E494E5057DD99AEC3D907 /* Frameworks */,
@@ -148,6 +179,7 @@
 			children = (
 				56D4867E24392247003F0AFB /* CarNum.app */,
 				491CF2E126594FC600C1B48A /* CarNumTests.xctest */,
+				49168BFF265BB409007E4154 /* CarNumUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +216,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		49168BFE265BB409007E4154 /* CarNumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49168C08265BB409007E4154 /* Build configuration list for PBXNativeTarget "CarNumUITests" */;
+			buildPhases = (
+				49168BFB265BB409007E4154 /* Sources */,
+				49168BFC265BB409007E4154 /* Frameworks */,
+				49168BFD265BB409007E4154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49168C05265BB409007E4154 /* PBXTargetDependency */,
+			);
+			name = CarNumUITests;
+			productName = CarNumUITests;
+			productReference = 49168BFF265BB409007E4154 /* CarNumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		491CF2E026594FC600C1B48A /* CarNumTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 491CF2EA26594FC600C1B48A /* Build configuration list for PBXNativeTarget "CarNumTests" */;
@@ -231,6 +281,10 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Tambanco;
 				TargetAttributes = {
+					49168BFE265BB409007E4154 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 56D4867D24392247003F0AFB;
+					};
 					491CF2E026594FC600C1B48A = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 56D4867D24392247003F0AFB;
@@ -255,11 +309,19 @@
 			targets = (
 				56D4867D24392247003F0AFB /* CarNum */,
 				491CF2E026594FC600C1B48A /* CarNumTests */,
+				49168BFE265BB409007E4154 /* CarNumUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		49168BFD265BB409007E4154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		491CF2DF26594FC600C1B48A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,11 +384,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		49168BFB265BB409007E4154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49168C02265BB409007E4154 /* CarNumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		491CF2DD26594FC600C1B48A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				49357B1F265A33C2002151F8 /* CategoryViewControllerTests.swift in Sources */,
+				498989A9265BB4B6002F7C54 /* CarNumUITests.swift in Sources */,
 				49357B23265A3517002151F8 /* CarNumViewControllerTests.swift in Sources */,
 				491CF2E426594FC600C1B48A /* CarNumTests.swift in Sources */,
 			);
@@ -349,6 +420,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		49168C05265BB409007E4154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56D4867D24392247003F0AFB /* CarNum */;
+			targetProxy = 49168C04265BB409007E4154 /* PBXContainerItemProxy */;
+		};
 		491CF2E726594FC600C1B48A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 56D4867D24392247003F0AFB /* CarNum */;
@@ -376,6 +452,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		49168C06265BB409007E4154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LU2BMBADH;
+				INFOPLIST_FILE = CarNumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tambanco.CarNumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarNum;
+			};
+			name = Debug;
+		};
+		49168C07265BB409007E4154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LU2BMBADH;
+				INFOPLIST_FILE = CarNumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tambanco.CarNumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarNum;
+			};
+			name = Release;
+		};
 		491CF2E826594FC600C1B48A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -573,6 +689,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		49168C08265BB409007E4154 /* Build configuration list for PBXNativeTarget "CarNumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49168C06265BB409007E4154 /* Debug */,
+				49168C07265BB409007E4154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		491CF2EA26594FC600C1B48A /* Build configuration list for PBXNativeTarget "CarNumTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
