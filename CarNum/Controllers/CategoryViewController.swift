@@ -23,8 +23,7 @@ class CategoryViewController: SwipeTableViewController
         loadCategories()
     }
     
-    override func viewWillAppear(_ animated: Bool)
-    {
+    override func viewWillAppear(_ animated: Bool) {
         guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
         
         navBar.backgroundColor = UIColor(hexString: "00b894")
