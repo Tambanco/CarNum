@@ -10,15 +10,13 @@ import UIKit
 import CoreData
 import ChameleonFramework
 
-class CategoryViewController: SwipeTableViewController
-{
+class CategoryViewController: SwipeTableViewController {
     // MARK: - Properties
     var categories = [Category]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     // MARK: - Life cycle
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         loadCategories()
     }
@@ -49,67 +47,51 @@ class CategoryViewController: SwipeTableViewController
     }
     
     //MARK: - TableView delegate method
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToCarNumbers", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! CarNumViewController
-        if let indexPath = tableView.indexPathForSelectedRow
-        {
+        if let indexPath = tableView.indexPathForSelectedRow {
             destinationVC.selectedCategory = categories[indexPath.row]
         }
     }
     
     //MARK: - Data manipulation methods
-    func saveCategories()
-    {
-        do
-        {
+    func saveCategories() {
+        do {
             try context.save()
-        }
-        catch
-        {
+        } catch {
             print("Error saving category \(error)")
         }
             tableView.reloadData()
     }
     
-    func loadCategories()
-    {
+    func loadCategories() {
         let request: NSFetchRequest<Category> = Category.fetchRequest()
-            do
-            {
+            do {
                 categories = try context.fetch(request)
-            }
-            catch
-            {
+            } catch {
                 print("Error fetching request \(error)")
             }
                 tableView.reloadData()
     }
     
     //MARK: - Delete data from Swipe
-    override func updateModel(at indexPath: IndexPath)
-    {
+    override func updateModel(at indexPath: IndexPath) {
         super.updateModel(at: indexPath)
         self.context.delete(self.categories[indexPath.row])
         self.categories.remove(at: indexPath.row)
-        do
-        {
+        do {
             try self.context.save()
-        }
-        catch
-        {
+        } catch {
             print("Error saving context \(error)")
         }
     }
     
     //MARK: - Add new category
-    @IBAction func addCategoryPressed(_ sender: UIBarButtonItem)
-    {
+    @IBAction func addCategoryPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Body Type", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
@@ -128,5 +110,4 @@ class CategoryViewController: SwipeTableViewController
         }
         present(alert, animated: true, completion: nil)
     }
-    
 }
