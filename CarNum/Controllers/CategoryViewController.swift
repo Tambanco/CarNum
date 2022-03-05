@@ -94,19 +94,20 @@ class CategoryViewController: SwipeTableViewController {
     @IBAction func addCategoryPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Body Type", message: "", preferredStyle: .alert)
+        
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
-        let newCategory = Category(context: self.context)
-        newCategory.name = textField.text!
-        newCategory.colourOfCell = UIColor.randomFlat()?.hexValue()
-        self.categories.append(newCategory)
-        self.saveCategories()
+            let newCategory = Category(context: self.context)
+            newCategory.name = textField.text!
+            newCategory.colourOfCell = UIColor.randomFlat()?.hexValue()
+            self.categories.append(newCategory)
+            self.saveCategories()
         }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(action)
-        alert.addTextField { (field) in
-        textField = field
-        textField.autocapitalizationType = .sentences
-        textField.placeholder = "Car Body Type"
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(action)
+            alert.addTextField { (field) in
+            textField = field
+            textField.autocapitalizationType = .sentences
+            textField.placeholder = "Car Body Type"
         }
         present(alert, animated: true, completion: nil)
     }
