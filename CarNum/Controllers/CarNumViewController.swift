@@ -16,14 +16,14 @@ class CarNumViewController: SwipeTableViewController, RecieveData {
     // MARK: - Properties
     var itemArray = [Item]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    @IBOutlet weak var searchBar: UISearchBar!
-    
     var selectedCategory: Category? {
         didSet {
             loadItems()
         }
     }
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

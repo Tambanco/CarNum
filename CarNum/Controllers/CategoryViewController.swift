@@ -23,7 +23,6 @@ class CategoryViewController: SwipeTableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
-        
         navBar.backgroundColor = UIColor(hexString: "00b894")
         view.backgroundColor = UIColor(hexString: "00b894")
         if let index = self.tableView.indexPathForSelectedRow {
