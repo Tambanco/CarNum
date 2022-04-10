@@ -8,21 +8,18 @@
 
 import UIKit
 
-protocol RecieveData
-{
+protocol RecieveData {
     func dataRecieved(data: String)
 }
 
-class AddViewController: UIViewController, UITextFieldDelegate
-{
+class AddViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Properties
     var delegate: RecieveData?
     var data = ""
     
     @IBOutlet weak var labelText: UITextField!
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         labelText.layer.cornerRadius = 5.0
@@ -31,8 +28,7 @@ class AddViewController: UIViewController, UITextFieldDelegate
         view.backgroundColor = UIColor(hexString: "#00b894")  
     }
     
-    @IBAction func addNewItemButton(_ sender: UIButton)
-    {
+    @IBAction func addNewItemButton(_ sender: UIButton) {
         let totalData = "\(self.labelText.text!)"
         
         labelText.endEditing(true)
@@ -40,13 +36,11 @@ class AddViewController: UIViewController, UITextFieldDelegate
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func cancelButtonPressed(_ sender: UIButton)
-    {
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool
-    {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         labelText.endEditing(true)
         return true
     }
